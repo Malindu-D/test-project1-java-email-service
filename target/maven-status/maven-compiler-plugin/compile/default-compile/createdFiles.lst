@@ -1,0 +1,7 @@
+com\userdata\emailservice\models\UserData.class
+com\userdata\emailservice\services\EmailService.class
+com\userdata\emailservice\services\DatabaseService.class
+com\userdata\emailservice\models\ApiResponse.class
+com\userdata\emailservice\models\EmailRequest.class
+com\userdata\emailservice\services\EmailTemplateBuilder.class
+com\userdata\emailservice\App.class
