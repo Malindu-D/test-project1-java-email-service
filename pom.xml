@@ -88,6 +88,8 @@
                                 </transformer>
                             </transformers>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <shadedArtifactAttached>false</shadedArtifactAttached>
+                            <finalName>${project.artifactId}-${project.version}</finalName>
                         </configuration>
                     </execution>
                 </executions>
