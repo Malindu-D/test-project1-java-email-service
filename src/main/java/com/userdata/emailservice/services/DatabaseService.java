@@ -20,7 +20,7 @@ public class DatabaseService {
 
     public List<UserData> getAllUserData() {
         List<UserData> userDataList = new ArrayList<>();
-        String query = "SELECT Id, Name, Age, CreatedAt, Email FROM UserData ORDER BY CreatedAt DESC";
+        String query = "SELECT Id, Name, Age, CreatedAt FROM UserData ORDER BY CreatedAt DESC";
 
         try (Connection conn = DriverManager.getConnection(getConnectionString());
              Statement stmt = conn.createStatement();
@@ -38,9 +38,8 @@ public class DatabaseService {
                     userData.setCreatedAt(timestamp.toLocalDateTime());
                 }
                 
-                // Handle nullable Email
-                String email = rs.getString("Email");
-                userData.setEmail(email != null ? email : "");
+                // Email is not stored in database
+                userData.setEmail("");
 
                 userDataList.add(userData);
             }
